@@ -1,0 +1,10 @@
+// NORMALIZE ==============================================
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+
+// BASE ===================================================
+@import "base/variables.scss";
+@import "base/mixins.scss";
+@import "base/fonts.scss";
+@import "base/general.scss";
+
+// BLOCKS =================================================

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Museo Sans";
+    src: local("MuseoSansCyrl-300"), url("../fonts/MuseoSansCyrl-300.woff2") format("woff2"),
+        url("../fonts/MuseoSansCyrl-300.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Museo Sans";
+    src: local("MuseoSansCyrl-500"), url("../fonts/MuseoSansCyrl-500.woff2") format("woff2"),
+        url("../fonts/MuseoSansCyrl-500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Museo Sans";
+    src: local("MuseoSansCyrl-900"), url("../fonts/MuseoSansCyrl-900.woff2") format("woff2"),
+        url("../fonts/MuseoSansCyrl-900.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Museo Sans";
+    src: local("MuseoSansCyrl-700"), url("../fonts/MuseoSansCyrl-700.woff2") format("woff2"),
+        url("../fonts/MuseoSansCyrl-700.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.eot?ufl4li");
+    src: url("../fonts/icomoon.eot?ufl4li#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?ufl4li") format("truetype"), url("../fonts/icomoon.woff?ufl4li") format("woff"),
+        url("../fonts/icomoon.svg?ufl4li#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinterest:before {
+    content: "\1f32b";
+    color: #fff;
+}
+.icon-instagram:before {
+    content: "\e901";
+    color: #fff;
+}
+.icon-facebook:before {
+    content: "\e902";
+    color: #fff;
+}
