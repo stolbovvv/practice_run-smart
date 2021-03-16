@@ -1,0 +1,8 @@
+// HOVER ONLY ON DESKTOP:
+@mixin hover-desktop($min-width) {
+    @media (min-width: $min-width + px) {
+        &:hover {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.promo {
+    padding: 21px 0 93px 0;
+    background-image: url(../img/bg-promo.png);
+    color: $color-wihte;
+
+    &__title {
+        margin-top: 90px;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 100%;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        margin-top: 17px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 100%;
+        text-transform: uppercase;
+        text-align: right;
+    }
+
+    &__offers-wrapper {
+        margin-top: 60px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__offers-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 30px;
+        width: 130px;
+    }
+
+    &__offers-icon {
+        margin: 0 auto;
+        width: 42px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__offers-descr {
+        margin-top: 20px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__btn {
+        margin: 66px 0 0 auto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px / 16px * 100%;
+        width: 300px;
+        height: 50px;
+        text-transform: uppercase;
+    }
+
+    &__more {
+        margin-top: 10px;
+
+        text-align: right;
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+            transition: color 0.3s;
+            margin-left: 0.3rem;
+
+            @include hover-desktop(767) {
+                color: $color-main-red;
+            }
+        }
+    }
+}

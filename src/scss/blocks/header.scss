@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-wihte;
+
+    &__logo {
+        width: 250px;
+    }
+
+    &__logo-img {
+        width: 100%;
+    }
+
+    &__official {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            margin: 0;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 12px / 12px * 100%;
+        }
+        span {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 29px / 18px * 100%;
+        }
+    }
+
+    &__contact {
+        a {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 18px / 18px * 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__contact-btn {
+        margin-top: 4px;
+        margin-left: auto;
+        width: 153px;
+        height: 32px;
+    }
+}
