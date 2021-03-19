@@ -1,6 +1,9 @@
 .promo {
     padding: 21px 0 93px 0;
     background-image: url(../img/bg-promo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     color: $color-wihte;
 
     &__title {
@@ -11,21 +14,39 @@
         line-height: 100%;
         text-align: right;
         text-transform: uppercase;
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+        @media (max-width: 425px) {
+            font-size: 34px;
+        }
     }
 
     &__subtitle {
         margin-top: 17px;
         font-weight: 300;
         font-size: 24px;
-        line-height: 100%;
+        line-height: 120%;
         text-transform: uppercase;
         text-align: right;
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+        @media (max-width: 425px) {
+            font-size: 20px;
+        }
     }
 
     &__offers-wrapper {
         margin-top: 60px;
         display: flex;
         justify-content: flex-end;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     }
 
     &__offers-item {
@@ -34,6 +55,9 @@
         justify-content: center;
         margin-left: 30px;
         width: 130px;
+        &:first-child {
+            margin-left: 0;
+        }
     }
 
     &__offers-icon {
@@ -58,9 +82,12 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 25px / 16px * 100%;
-        width: 300px;
+        max-width: 300px;
         height: 50px;
         text-transform: uppercase;
+        @media (max-width: 768px) {
+            margin-right: auto;
+        }
     }
 
     &__more {
@@ -68,13 +95,17 @@
 
         text-align: right;
 
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+
         a {
             color: inherit;
             text-decoration: underline;
             transition: color 0.3s;
             margin-left: 0.3rem;
 
-            @include hover-desktop(767) {
+            @include hover-desktop(768) {
                 color: $color-main-red;
             }
         }

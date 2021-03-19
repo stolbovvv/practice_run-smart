@@ -6,6 +6,13 @@
 
     &__logo {
         width: 250px;
+        @media (max-width: 768px) {
+            width: 200px;
+        }
+        @media (max-width: 425px) {
+            align-self: flex-end;
+            margin-right: 20px;
+        }
     }
 
     &__logo-img {
@@ -16,27 +23,39 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-weight: 500;
 
         p {
             margin: 0;
-            font-weight: 500;
             font-size: 12px;
             line-height: 12px / 12px * 100%;
         }
         span {
-            font-weight: 500;
             font-size: 18px;
             line-height: 29px / 18px * 100%;
+        }
+
+        @media (max-width: 679px) {
+            display: none;
         }
     }
 
     &__contact {
         a {
+            display: block;
             font-weight: 700;
             font-size: 18px;
             line-height: 18px / 18px * 100%;
             text-decoration: none;
             color: inherit;
+            text-align: right;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+            @media (max-width: 425px) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -45,5 +64,13 @@
         margin-left: auto;
         width: 153px;
         height: 32px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 19px / 19px * 100%;
+
+        @media (max-width: 425px) {
+            width: 127px;
+            font-size: 11px;
+        }
     }
 }
