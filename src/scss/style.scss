@@ -1,13 +1,17 @@
 // NORMALIZE ==============================================
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
-
+// ========================================================
+// LIBS ===================================================
+@import "libs/slick.scss";
+// ========================================================
 // BASE ===================================================
 @import "base/variables.scss";
 @import "base/mixins.scss";
 @import "base/fonts.scss";
 @import "base/general.scss";
-
+// ========================================================
 // BLOCKS =================================================
 @import "blocks/header.scss";
 @import "blocks/promo.scss";
 @import "blocks/advantages.scss";
+// ========================================================
