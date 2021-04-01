@@ -1,0 +1,36 @@
+.watch-slider {
+    padding: 40px 0;
+
+    // &__wrapper {
+    // }
+
+    &__arrow {
+        cursor: pointer;
+        padding-right: 15px;
+        &_next {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        height: 527px;
+        picture {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            img {
+                max-height: 100%;
+            }
+        }
+    }
+
+    &__item-img {
+        display: block;
+        margin: 0 auto;
+    }
+}

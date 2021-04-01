@@ -948,6 +948,53 @@ template {
   text-transform: uppercase;
 }
 
+.watch-slider {
+  padding: 40px 0;
+}
+
+.watch-slider__arrow {
+  cursor: pointer;
+  padding-right: 15px;
+}
+
+.watch-slider__arrow_next {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.watch-slider__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.watch-slider__item {
+  height: 527px;
+}
+
+.watch-slider__item picture {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.watch-slider__item picture img {
+  max-height: 100%;
+}
+
+.watch-slider__item-img {
+  display: block;
+  margin: 0 auto;
+}
+
 @media (min-width: 767px) {
   .button:hover {
     background-color: #b30202;

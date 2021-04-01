@@ -1,0 +1,7 @@
+$(document).ready(function () {
+    $('.watch-slider__content').slick({
+        prevArrow: '<img class="watch-slider__arrow watch-slider__arrow_prev" src="img/icons/icon-arrow-slider.svg" alt="prev"></img>',
+        nextArrow: '<img class="watch-slider__arrow watch-slider__arrow_next" src="img/icons/icon-arrow-slider.svg" alt="prev"></img>',
+
+    });
+});
