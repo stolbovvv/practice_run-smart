@@ -31,4 +31,48 @@
     line-height: 100%;
     text-align: center;
     color: #0d0d0d;
+    text-transform: uppercase;
+    margin: 0;
+
+    @media (max-width: 425px) {
+        font-size: 20px;
+    }
+}
+
+.form {
+    &__input-wrapper {
+        margin-top: 12px;
+        &:first-child {
+            margin-top: 0px;
+        }
+        &:last-child {
+            margin-top: 17px;
+        }
+    }
+    input {
+        padding: 0 21px;
+        width: 303px;
+        height: 54px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #fff;
+        color: $color-main-back;
+        &::placeholder {
+            color: #4b4b4b;
+        }
+    }
+    button {
+        width: 303px;
+        height: 58px;
+        border: none;
+        color: #fff;
+    }
+
+    @media (max-width: 425px) {
+        input,
+        button {
+            width: 100%;
+        }
+    }
 }

@@ -6,6 +6,10 @@
     background-size: cover;
     color: $color-wihte;
 
+    @media (max-width: 425px) {
+        padding-bottom: 46px;
+    }
+
     &__title {
         margin-top: 90px;
         margin-bottom: 0;
@@ -20,6 +24,7 @@
         }
         @media (max-width: 425px) {
             font-size: 34px;
+            margin-top: 70px;
         }
     }
 
@@ -46,6 +51,7 @@
 
         @media (max-width: 768px) {
             justify-content: center;
+            align-items: flex-start;
         }
     }
 
@@ -62,6 +68,7 @@
 
     &__offers-icon {
         margin: 0 auto;
+        height: 46px;
         width: 42px;
 
         img {
