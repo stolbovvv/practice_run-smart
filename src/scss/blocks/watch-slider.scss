@@ -7,46 +7,46 @@
 
     &__wrapper {
         width: 100%;
-        min-width: 0;
-    }
-
-    &__arrow {
-        cursor: pointer;
-        padding-right: 15px;
-        &_next {
-            transform: rotate(180deg);
-        }
     }
 
     &__content {
-        @media (min-width: 769px) {
-            display: flex;
-            align-items: center;
+        position: relative;
+        max-width: 750px;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            width: 70%;
         }
     }
 
-    &__item {
-        border: 1px solid transparent; // ! Кастыль который позволяет работать слайдеру =)
-
-        picture {
-            display: block;
-            position: relative;
-            max-width: 750px;
-            margin: 0 auto;
-            height: 0;
-            padding-bottom: 61.422%;
-        }
+    &__content-item {
+        position: relative;
+        height: 0;
+        padding-bottom: 77.334%;
     }
 
-    &__item-img {
-        display: block;
+    &__content-img {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
+        right: 0;
         height: 100%;
+        width: 100%;
         object-fit: contain;
         object-position: center;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &_prev {
+            left: -84px;
+        }
+        &_next {
+            transform: translateY(-50%) rotate(180deg);
+            right: -84px;
+        }
     }
 
     .slick-dots {
