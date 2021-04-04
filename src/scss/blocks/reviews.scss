@@ -1,0 +1,67 @@
+.reviews {
+    padding: 36px 0 20px 0;
+
+    @media (max-width: 768px) {
+        padding-top: 18px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 60px;
+
+        @media (max-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__item-img {
+        width: 169px;
+        margin-right: 60px;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            width: 64px;
+        }
+    }
+
+    &__item-name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        color: $color-main-back;
+        @media (max-width: 768px) {
+            margin-top: 8px;
+            font-size: 22px;
+            margin-left: 84px;
+        }
+    }
+
+    &__item-marathon {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px / 14px * 100%;
+        color: $color-main-grey;
+        @media (max-width: 768px) {
+            margin-left: 84px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item-text {
+        margin-top: 10px;
+
+        p {
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px / 16px * 100%;
+            color: $color-main-back;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
