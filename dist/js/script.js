@@ -15,6 +15,13 @@ $(document).ready(function () {
         }]
     });
 
+    $('.catalog__triggers-mobile').change(function () {
+        $('.catalog__content-item').removeClass('catalog__content-item_active');
+        $('.catalog__card-more').removeClass('catalog__card-more_active');
+
+        $(`#${$('.catalog__triggers-mobile option:selected').val()}`).addClass('catalog__content-item_active');
+    });
+
     $('.catalog__triggers-item').click(function () {
         $('.catalog__triggers-item').removeClass('catalog__triggers-item_active');
         $('.catalog__content-item').removeClass('catalog__content-item_active');
@@ -39,6 +46,5 @@ $(document).ready(function () {
             .parents('.catalog__card-more')
             .removeClass('catalog__card-more_active');
     })
-
 
 });

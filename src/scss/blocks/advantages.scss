@@ -2,7 +2,7 @@
     padding: 73px 0 65px 0;
     background: #f6f6f6;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
         padding: 50px 0 46px 0;
     }
 
@@ -12,8 +12,6 @@
         margin-top: 60px;
         @media (max-width: 768px) {
             flex-direction: column;
-        }
-        @media (max-width: 425px) {
             margin-top: 30px;
         }
     }

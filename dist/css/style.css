@@ -1151,6 +1151,16 @@ template {
   margin-top: 46px;
 }
 
+.catalog__triggers-mobile {
+  width: 100%;
+  max-width: 373px;
+  height: 52px;
+  background-color: rgba(0, 0, 0, 0.0001);
+  border: 1px solid #d0d0d0;
+  margin: 0;
+  padding: 0 15px;
+}
+
 .catalog__triggers-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1381,6 +1391,10 @@ template {
   .button:hover {
     background-color: #b30202;
   }
+
+  .catalog__triggers-mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1418,6 +1432,10 @@ template {
     font-size: 16px;
   }
 
+  .promo {
+    padding-bottom: 46px;
+  }
+
   .promo__title {
     text-align: center;
   }
@@ -1443,11 +1461,16 @@ template {
     text-align: center;
   }
 
+  .advantages {
+    padding: 50px 0 46px 0;
+  }
+
   .advantages__items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 30px;
   }
 
   .advantages__item {
@@ -1467,28 +1490,27 @@ template {
   .advantages__item-text {
     margin-top: 10px;
   }
+
+  .watch-slider {
+    padding: 50px 0 20px 0;
+  }
+
+  .consultation {
+    padding: 50px 0 46px 0;
+  }
+
+  .catalog__triggers {
+    margin-top: 23px;
+  }
+
+  .catalog__content {
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 767px) {
-  .catalog__triggers {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
   .catalog__triggers-item {
-    -webkit-transform: skew(0deg);
-        -ms-transform: skew(0deg);
-            transform: skew(0deg);
-    width: 100%;
-    max-width: 373px;
-    min-width: 303px;
-  }
-
-  .catalog__triggers-item span {
-    -webkit-transform: skew(0deg);
-        -ms-transform: skew(0deg);
-            transform: skew(0deg);
-    font-size: 18px;
+    display: none;
   }
 
   .catalog__content-item {
@@ -1527,10 +1549,6 @@ template {
     font-size: 11px;
   }
 
-  .promo {
-    padding-bottom: 46px;
-  }
-
   .promo__title {
     font-size: 34px;
     margin-top: 70px;
@@ -1538,18 +1556,6 @@ template {
 
   .promo__subtitle {
     font-size: 20px;
-  }
-
-  .advantages {
-    padding: 50px 0 46px 0;
-  }
-
-  .advantages__items {
-    margin-top: 30px;
-  }
-
-  .watch-slider {
-    padding: 50px 0 46px 0;
   }
 
   .consultation {
