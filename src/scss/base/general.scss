@@ -40,8 +40,14 @@
 }
 
 .form {
+    @media (max-width: 425px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     &__input-wrapper {
         margin-top: 12px;
+
         &:first-child {
             margin-top: 0px;
         }
@@ -69,11 +75,13 @@
         color: #fff;
     }
 
-    @media (max-width: 425px) {
-        input,
-        button {
-            width: 100%;
-        }
+    &_modal {
+        margin-top: 14px;
+    }
+
+    &_modal &__input-wrapper {
+        display: flex;
+        justify-content: center;
     }
 }
 

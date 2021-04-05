@@ -47,4 +47,24 @@ $(document).ready(function () {
             .removeClass('catalog__card-more_active');
     })
 
+    // MODAL:
+    $('.modal__close').click(function () {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+
+    $('[data-modal=consultation]').click(function () {
+        $('.overlay, #consultation').fadeIn();
+    });
+
+    $('.catalog__card-button').each(function (i) {
+        $(this).click(function () {
+            $('#order .modal__descr').text($('.catalog__card-title').eq(i).text())
+            $('.overlay, #order').fadeIn();
+        })
+    })
+
+    // $('.catalog__card-button').each(function (i) {
+
+    // });
+
 });
