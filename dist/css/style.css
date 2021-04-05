@@ -1437,6 +1437,94 @@ template {
   margin-top: 0;
 }
 
+.footer {
+  position: relative;
+  color: #ffffff;
+}
+
+.footer__info {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 460px;
+  padding: 50px 68px 60px 68px;
+  background-color: #c70101;
+}
+
+.footer__address {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 142%;
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.footer__tel {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 38px;
+}
+
+.footer__socila {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.footer__solcial-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 53px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  margin-right: 27px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__solcial-link::before {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__solcial-link:last-child {
+  margin-right: 0;
+}
+
 @media (min-width: 767px) {
   .button:hover {
     background-color: #b30202;
@@ -1464,6 +1552,16 @@ template {
 
   .catalog__triggers-item_active:hover {
     background-color: #9e2626;
+  }
+
+  .footer__solcial-link:hover {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .footer__solcial-link:hover::before {
+    color: #b30202;
   }
 }
 
@@ -1584,6 +1682,10 @@ template {
     margin-left: 84px;
     margin-bottom: 30px;
   }
+
+  .footer__info {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1648,5 +1750,10 @@ template {
   .consultation__subtitle {
     text-align: center;
     font-size: 16px;
+  }
+
+  .footer__info {
+    width: 100%;
+    padding: 50px 34px 60px 34px;
   }
 }
