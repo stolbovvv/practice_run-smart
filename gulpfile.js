@@ -1,55 +1,60 @@
-
 const DIST_FOLDER = "dist";
-const SRC_FOLDER  = "src";
+const SRC_FOLDER = "src";
 
 let path = {
 
     build: {
-        html:   DIST_FOLDER + "/",
-        css:    DIST_FOLDER + "/css/",
-        js:     DIST_FOLDER + "/js/",
-        img:    DIST_FOLDER + "/img/",
-        fonts:  DIST_FOLDER + "/fonts/",
+        html: DIST_FOLDER + "/",
+        css: DIST_FOLDER + "/css/",
+        js: DIST_FOLDER + "/js/",
+        mailer: DIST_FOLDER + "/mailer/",
+        img: DIST_FOLDER + "/img/",
+        fonts: DIST_FOLDER + "/fonts/",
     },
 
     src: {
-        html:   SRC_FOLDER + "/**/*.html",
-        css:    SRC_FOLDER + "/scss/style.scss",
-        js:     SRC_FOLDER + "/js/**/*.js",
-        img:    SRC_FOLDER + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-        fonts:  SRC_FOLDER + "/fonts/**/*",
+        html: SRC_FOLDER + "/**/*.html",
+        css: SRC_FOLDER + "/scss/style.scss",
+        js: SRC_FOLDER + "/js/**/*.js",
+        mailer: SRC_FOLDER + "/mailer/**/*",
+        img: SRC_FOLDER + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        fonts: SRC_FOLDER + "/fonts/**/*",
     },
     watch: {
-        html:   SRC_FOLDER + "/**/*.html",
-        css:    SRC_FOLDER + "/scss/**/*.scss",
-        js:     SRC_FOLDER + "/js/**/*.js",
-        img:    SRC_FOLDER + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        html: SRC_FOLDER + "/**/*.html",
+        css: SRC_FOLDER + "/scss/**/*.scss",
+        js: SRC_FOLDER + "/js/**/*.js",
+        mailer: SRC_FOLDER + "/mailer/**/*.php",
+        img: SRC_FOLDER + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
     clean: "./" + DIST_FOLDER + "/"
 }
 
-let { src, dest }   = require("gulp");
-let gulp            = require ("gulp");
-let browsersync     = require("browser-sync").create();
-let del             = require("del");
-let scss            = require("gulp-sass");
-let autoprefixer    = require("gulp-autoprefixer");
-let group_media     = require("gulp-group-css-media-queries");
-let clean_css       = require("gulp-clean-css");
-let rename          = require("gulp-rename");
-let uglify          = require("gulp-uglify-es").default;
-let imagemin        = require("gulp-imagemin");
-let webp            = require("gulp-webp");
-let webphtml        = require("gulp-webp-html");
+let {
+    src,
+    dest
+} = require("gulp");
+let gulp = require("gulp");
+let browsersync = require("browser-sync").create();
+let del = require("del");
+let scss = require("gulp-sass");
+let autoprefixer = require("gulp-autoprefixer");
+let group_media = require("gulp-group-css-media-queries");
+let clean_css = require("gulp-clean-css");
+let rename = require("gulp-rename");
+let uglify = require("gulp-uglify-es").default;
+let imagemin = require("gulp-imagemin");
+let webp = require("gulp-webp");
+let webphtml = require("gulp-webp-html");
 // let webpcss        = require("gulp-webpcss");
 
 function browserSync(params) {
     browsersync.init({
-        server:{
+        server: {
             baseDir: "./" + DIST_FOLDER + "/"
         },
-        port:3000,
-        notify:false
+        port: 3000,
+        notify: false
     })
 }
 
@@ -101,6 +106,13 @@ function js() {
         .pipe(browsersync.stream())
 }
 
+function mailer() {
+    return src(path.src.mailer)
+        .pipe(dest(path.build.mailer))
+        .pipe(dest(path.build.js))
+        .pipe(browsersync.stream())
+}
+
 function iamges() {
     return src(path.src.img)
         .pipe(
@@ -113,7 +125,9 @@ function iamges() {
         .pipe(
             imagemin({
                 progressive: true,
-                svgoPlugins: [{ removeViewBox: false }],
+                svgoPlugins: [{
+                    removeViewBox: false
+                }],
                 interlaced: true,
                 optimizationLevel: 3 // 0 to 7
             })
@@ -132,6 +146,7 @@ function watchFiles(params) {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.mailer], js);
     gulp.watch([path.watch.img], iamges);
 }
 
@@ -139,7 +154,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, iamges, fonts));
+let build = gulp.series(clean, gulp.parallel(js, css, mailer, html, iamges, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;
