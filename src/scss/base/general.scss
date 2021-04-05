@@ -45,7 +45,11 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
     &__input-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         margin-top: 12px;
 
         &:first-child {
@@ -53,6 +57,9 @@
         }
         &:last-child {
             margin-top: 17px;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
         }
     }
     input {
@@ -68,6 +75,68 @@
             color: #4b4b4b;
         }
     }
+    input.error {
+        border: 2px solid $color-main-red-hover;
+    }
+
+    label.error {
+        position: relative;
+        background-color: #ffc618;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-left: 10px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -10px;
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-top-width: 8px;
+            border-bottom-width: 8px;
+            border-right: 16px solid #ffc618;
+        }
+
+        @media (max-width: 768px) {
+            width: 303px;
+            margin-top: 8px;
+            margin-left: 0;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -8px;
+                transform: translateY(0);
+                left: 16px;
+                border: 0 solid transparent;
+                border-right-width: 8px;
+                border-left-width: 8px;
+                border-bottom: 8px solid #ffc618;
+            }
+        }
+    }
+
+    #consultation & label.error,
+    #order & label.error {
+        width: 303px;
+        margin-top: 8px;
+        margin-left: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            transform: translateY(0);
+            left: 16px;
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-right-width: 8px;
+            border-left-width: 8px;
+            border-bottom: 8px solid #ffc618;
+        }
+    }
+
     button {
         width: 303px;
         height: 58px;
