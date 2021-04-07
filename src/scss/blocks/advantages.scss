@@ -37,6 +37,16 @@
         height: 70px;
     }
 
+    &__item-icon.anim {
+        animation-name: heart-beat;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
     &__item-title {
         margin-top: 35px;
         font-weight: 700;

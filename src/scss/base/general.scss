@@ -154,6 +154,19 @@
     }
 }
 
+.page-up {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+
+    img {
+        width: 100%;
+    }
+}
+
 @keyframes fide-in {
     0% {
         opacity: 0;
@@ -161,5 +174,33 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes heart-beat {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.02);
+    }
+
+    30% {
+        transform: scale(0.98);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    70% {
+        transform: scale(0.94);
+    }
+
+    90% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(1);
     }
 }
